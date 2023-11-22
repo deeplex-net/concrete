@@ -130,8 +130,6 @@ class data_defined_status_domain_type : public system_error::status_code_domain
 {
     template <class DomainType>
     friend class system_error::status_code;
-    template <class StatusCode>
-    friend class system_error::detail::indirecting_domain;
 
 public:
     using value_type = Enum;

@@ -9,7 +9,9 @@
 
 #include <catch2/catch_test_macros.hpp>
 #include <catch2/generators/catch_generators.hpp>
+#include <status-code/nested_status_code.hpp>
 #include <status-code/quick_status_code_from_enum.hpp>
+#include <status-code/system_code.hpp>
 
 #include "test_utils.hpp"
 
@@ -111,6 +113,14 @@ TEST_CASE("data defined domain returns the correct description")
     }));
 
     CHECK(std::string_view(test_code(code).message().data()) == description);
+}
+
+TEST_CASE("data defined domain can be put on the heap")
+{
+    cncr::system_error::system_code const subject
+            = cncr::system_error::make_nested_status_code(
+                    test_code{test_errc::perm});
+    CHECK(subject == test_errc::perm);
 }
 
 } // namespace cncr_tests

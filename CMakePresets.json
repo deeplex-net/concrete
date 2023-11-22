@@ -126,8 +126,8 @@
                 "x64-linux"
             ],
             "cacheVariables": {
-                "VCPKG_TARGET_TRIPLET": "x64-linux-clang",
-                "VCPKG_CHAINLOAD_TOOLCHAIN_FILE": "${sourceDir}/tools/toolchains/x64-linux-clang.cmake"
+                "VCPKG_TARGET_TRIPLET": "x64-linux-clang-16",
+                "VCPKG_CHAINLOAD_TOOLCHAIN_FILE": "${sourceDir}/tools/toolchains/x64-linux-clang-16.cmake"
             }
         },
         {
@@ -136,8 +136,8 @@
                 "x64-linux-clang"
             ],
             "cacheVariables": {
-                "VCPKG_TARGET_TRIPLET": "x64-linux-clang-15",
-                "VCPKG_CHAINLOAD_TOOLCHAIN_FILE": "${sourceDir}/tools/toolchains/x64-linux-clang-15.cmake",
+                "VCPKG_TARGET_TRIPLET": "x64-linux-clang-16",
+                "VCPKG_CHAINLOAD_TOOLCHAIN_FILE": "${sourceDir}/tools/toolchains/x64-linux-clang-16.cmake",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": true
             }
         },
@@ -171,8 +171,8 @@
             "name": "x64-macos-clang",
             "inherits": [ "x64-macos" ],
             "cacheVariables": {
-                "VCPKG_TARGET_TRIPLET": "x64-osx-clang-15-brew",
-                "VCPKG_CHAINLOAD_TOOLCHAIN_FILE": "${sourceDir}/tools/toolchains/x64-macos-clang-15-brew.cmake"
+                "VCPKG_TARGET_TRIPLET": "x64-osx-clang-16-brew",
+                "VCPKG_CHAINLOAD_TOOLCHAIN_FILE": "${sourceDir}/tools/toolchains/x64-macos-clang-16-brew.cmake"
             }
         },
         {

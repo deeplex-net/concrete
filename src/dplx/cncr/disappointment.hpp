@@ -28,8 +28,8 @@ template <typename T>
 struct status_code_throw_policy
     : outcome::experimental::policy::status_code_throw<
               T,
-              system_error::errored_status_code<system_error::erased<
-                      typename system_error::system_code::value_type>>,
+              system_error::erased_errored_status_code<
+                      typename system_error::system_code::value_type>,
               void>
 {
 };
@@ -37,8 +37,8 @@ struct status_code_throw_policy
 template <typename R>
 using result = outcome::experimental::status_result<
         R,
-        system_error::errored_status_code<system_error::erased<
-                typename system_error::system_code::value_type>>,
+        system_error::erased_errored_status_code<
+                typename system_error::system_code::value_type>,
         status_code_throw_policy<R>>;
 
 } // namespace dplx
